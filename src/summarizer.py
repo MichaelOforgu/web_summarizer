@@ -54,7 +54,7 @@ def summarize(url):
     try:
         website = Website(url)
         response = openai.chat.completions.create(
-            model="gpt-4",
+             model = "gpt-4o-mini",
             messages=messages_for(website)
         )
         return response.choices[0].message.content
